@@ -1,22 +1,22 @@
 # Kepler Spirograph
 
 background = 0.9
-w = 800
-h = 600
+w = 400
+h = 300
 
 resolution = 144
-cycles = 1000
+cycles = 322
 
 object1 = { # Mercury
     "apoapsis":69.816,
     "periapsis":46.001,
-    "GM":2203
+    "GM":220.3
 }
     
 object2 = { # Venus
     "apoapsis":108.939,
     "periapsis":107.477,
-    "GM":32486
+    "GM":3248.6
 }
 
 
@@ -25,31 +25,31 @@ object2 = { # Venus
 Mercury = { # Mercury
     "apoapsis":69.816,
     "periapsis":46.001,
-    "GM":2203
+    "GM":220.3
 }
 
 Venus = { # Venus
     "apoapsis":108.939,
     "periapsis":107.477,
-    "GM":32486
+    "GM":3248.6
 }
 
 Earth = { # Earth
     "apoapsis":152.100,
     "periapsis":147.095,
-    "GM":39860
+    "GM":3986.0
 }
 
 Mars = { # Mars
     "apoapsis":249.200,
     "periapsis":206.700,
-    "GM":42828
+    "GM":4282.8
 }
 
 Jupiter = { # Jupiter
     "apoapsis":816.620,
     "periapsis":740.520,
-    "GM":12668653
+    "GM":1266865.3
 }
 
 
@@ -90,12 +90,12 @@ def DrawOrbit (body):
 
     closePath()
     drawPath()
-    
+
 for i in range(cycles):
-    
-    evald1 = Evaluate(i / object1.get("period") / 2, object1)
-    evald2 = Evaluate(i / object2.get("period") / 2, object2)
-    
+
+    evald1 = Evaluate(i * object1.get("period") / 20000, object1)
+    evald2 = Evaluate(i * object2.get("period") / 20000, object2)
+
     strokeWidth(0.5)
     stroke(0, 0, 0, .2)
     line((evald1[0], evald1[1]), (evald2[0], evald2[1]))
