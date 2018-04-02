@@ -5,7 +5,5 @@ Given three orbital parameters (apoapsis, periapsis, standard gravitational para
 —
 
 Apsides are 1/1000000 real-world scale.
-
-Gravitational parameters should be 1/10000000000 real-world scale.
-
-As long as both bodies you're tracing are at the same scale, this shouldn't make much difference. Possibly.
+Gravitational parameters are 1/10000000000 real-world scale.
+Scientific accuracy has been sacrificed in the interests of aesthetics.
