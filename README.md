@@ -5,5 +5,7 @@ Given three orbital parameters (apoapsis, periapsis, standard gravitational para
 —
 
 Apsides are 1/1000000 real-world scale.
+
 Gravitational parameters are 1/10000000000 real-world scale.
-Scientific accuracy has been sacrificed in the interests of aesthetics.
+
+Decreasing the gravitational parameters (by bumping the decimal point up to the left) will slow down the orbit progression, resulting in a better temporal resolution.
